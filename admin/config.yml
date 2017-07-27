@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: johncomposed/theannualseconference.github.io # Path to your Github repository
+  branch: dev # Branch to update
+
+media_folder: "uploads" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "speakers"
+    label: "Speakers" 
+    folder: "_speakers"
+    create: true 
+    slug: "{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "speakers"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Picture", name: "pic", widget: "image"}
+      - {label: "Short Bio", name: "short_bio", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Full Bio", name: "content", widget: "markdown"}
+  - name: "sections"
+    label: "Sections" 
+    folder: "_sections"
+    create: true 
+    slug: "{{year}}-{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "sections"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Content", name: "content", widget: "markdown"}
+  - name: "years2"
+      label: "Years" 
+      folder: "_years2"
+      create: true 
+      slug: "{{year}}-{{slug}}" 
+      fields: 
+        - {label: "Layout", name: "layout", widget: "hidden", default: "years2"}
+        - {label: "Body", name: "body", widget: "markdown"}
+        - {label: "Content", name: "content", widget: "markdown"}
+
+
+
+
