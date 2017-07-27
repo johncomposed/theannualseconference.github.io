@@ -28,14 +28,14 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Content", name: "content", widget: "markdown"}
   - name: "years2"
-      label: "Years" 
-      folder: "_years2"
-      create: true 
-      slug: "{{year}}-{{slug}}" 
-      fields: 
-        - {label: "Layout", name: "layout", widget: "hidden", default: "years2"}
-        - {label: "Body", name: "body", widget: "markdown"}
-        - {label: "Content", name: "content", widget: "markdown"}
+    label: "Years" 
+    folder: "_years2"
+    create: true 
+    slug: "{{year}}-{{slug}}" 
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "years2"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Content", name: "content", widget: "markdown"}
 
 
 
