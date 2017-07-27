@@ -1,4 +1,4 @@
-console.log('hello world');
+console.log('Hello world!');
 /* globals jQuery $ scrollMonitor */
 
 
@@ -54,19 +54,21 @@ function loadTab(el) {
 }
 
 function scrollTo(hash) {
-  // $('html, body').animate({
-  //   scrollTop: $("#"+hash).offset().top
-  // }, 0);
+  $('html, body').animate({
+    scrollTop: $("#"+hash).offset().top
+  }, 1);
 }
 
 $(function() {  
   let hash = location.hash.slice(2);
   let hashActive = $("[data-tab='"+hash+"']")[0]
+  console.log(hash)
 
   // Load a tab from hash
   if(hash && hashActive) loadTab(hashActive);
   
   // Scroll to whatever hash we're on
+  // If i want to prevent browser saved y pos just setTimout 100
   if(hash && hashActive) scrollTo(hash);
 
   
@@ -95,13 +97,13 @@ $(function() {
 
   /* Scroll stuff */
 
-  $(window).scroll(throttle(function(e) {
-    // console.log(e.direction);
+  // $(window).scroll(throttle(function(e) {
+  //   // console.log(e.direction);
 
 
 
 
-  }, 100))
+  // }, 100))
 
   // $('.tab-titles__speaker').scrollToFixed();
 
